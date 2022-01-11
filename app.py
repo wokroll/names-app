@@ -11,6 +11,7 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
+
 @app.route('/')
 def index():
     return render_template("index.jinja")
@@ -22,7 +23,7 @@ def enter_name():
     name_in_db = Name.query.filter_by(name=form_name).first()
 
     if name_in_db:
-        result = "Already seen you " + form_name
+        result = "Already seen you, " + form_name
     else:
         new_name = Name(name=form_name)
         db.session.add(new_name)
@@ -39,5 +40,4 @@ def all_names():
 
 
 if __name__ == '__main__':
-    #app.run(host='0.0.0.0')
     app.run( host='0.0.0.0', port=5000)

@@ -11,7 +11,9 @@ Welcome
             <form class="form-signin" method="post">
                 <div class="form-group">
                     <label for="name">Name</label><br>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control" id="name" name="name" required pattern="\p{L}+"
+                            oninvalid="this.setCustomValidity('Enter letters only')"
+                            onchange="this.setCustomValidity('')">
                 </div>
                 <button type="submit" class="btn btn-primary">Say hello</button>
             </form>
