@@ -12,9 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: wokrolls/names-app@v1 # This is the action
+    - uses: wokroll/names-app@v1 # This is the action
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "names-app-sukhonos" #Must be unique in Heroku
+        heroku_app_name: "names-app-sukhonos-docker" #Must be unique in Heroku
         heroku_email: "suhonos.p@gmail.com"
         
