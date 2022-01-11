@@ -17,4 +17,4 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "names-app-sukhonos-docker" #Must be unique in Heroku
         heroku_email: "suhonos.p@gmail.com"
-        
+        usedocker: true
