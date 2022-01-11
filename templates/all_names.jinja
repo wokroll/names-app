@@ -1,0 +1,21 @@
+{% extends "base.jinja" %}
+
+{% block title %}
+All names
+{% endblock %}
+
+{% block content %}
+    <h1 class="h3 mb-3 font-weight-normal">List of all entered names</h1>
+        <table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for name in names %}
+        <tr>
+            <td>{{ name.name }}</td>
+            <td>{{ name.created_at }}</td>
+        </tr>
+    {% endfor %}
+        </table>
+{% endblock %}
