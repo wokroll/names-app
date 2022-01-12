@@ -13,5 +13,4 @@ COPY app.py app.py
 
 
 RUN set -ex && pipenv install
-ENTRYPOINT ['python']
 CMD FLASK_APP=app.py pipenv run flask run -h 0.0.0.0 -p 5000
